@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание№4</title>
+    <style>
+    #field {
+        display: grid;
+        grid-template-columns: repeat(8, 50px);
+        grid-template-rows: repeat(8, 50px);
+        counter-reset: numRight 9;
+        margin-top: 10%;
+        border: 1px solid grey;
+    }
+
+    body {
+        counter-reset: numLeft 9;
+        font-family: Verdana;
+        color: grey;
+        display: flex;
+        align-items: center;
+    }
+
+    .afterNum:after {
+        counter-increment: numRight -1;
+        content: counter(numRight);
+        position: relative;
+        left: 60px;
+        top: 15px;
+    }
+
+    .beforeNum:after {
+        counter-increment: numLeft -1;
+        content: counter(numLeft);
+        position: relative;
+        right: 20px;
+        top: 15px;
+    }
+
+    .anotherField {
+        counter-reset: letterUp 1;
+        border: 1px solid grey;
+        display: inline-block;
+        padding: 30px;
+        padding-top: 0;
+        margin-top: 40px;
+    }
+
+    .andAnotherField {
+        counter-reset: letterBot 1;
+        display: inline-block;
+        margin: auto;
+    }
+
+    .letterTop:after {
+        counter-increment: letterUp;
+        content: counter(letterUp, upper-alpha);
+        position: relative;
+        bottom: 25px;
+        left: 20px;
+    }
+
+    .letterBottom:before {
+        counter-increment: letterBot;
+        content: counter(letterBot, upper-alpha);
+        position: relative;
+        left: 20px;
+        top: 60px;
+    }
+
+    .chessCoub:nth-child(57):before {
+        content: 'A';
+        position: relative;
+        top: 60px;
+        left: 20px;
+    }
+
+    .chessCoub:nth-child(64):before {
+        content: 'H';
+        position: relative;
+        top: 60px;
+        left: 20px;
+    }
+
+    .chessCoub:first-child:before {
+        content: 'A';
+        position: relative;
+        top: -25px;
+        left: 20px;
+    }
+
+    .chessCoub:nth-child(8):before {
+        content: 'H';
+        position: relative;
+        top: -25px;
+        left: 20px;
+    }
+
+    /*поправить отъехавшие номера*/
+    .chessCoub:nth-child(8):after,
+    .chessCoub:nth-child(64):after {
+        position: relative;
+        left: 48px;
+    }
+
+    .chessCoub:nth-child(1):after,
+    .chessCoub:nth-child(57):after {
+        position: relative;
+        left: -30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="andAnotherField">
+        <div class="anotherField">
+            <div id="field">
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub letterTop"></div>
+                <div id="C" class="chessCoub letterTop"></div>
+                <div id="D" class="chessCoub letterTop"></div>
+                <div id="E" class="chessCoub letterTop"></div>
+                <div id="F" class="chessCoub letterTop"></div>
+                <div id="G" class="chessCoub letterTop"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub"></div>
+                <div id="C" class="chessCoub"></div>
+                <div id="D" class="chessCoub"></div>
+                <div id="E" class="chessCoub"></div>
+                <div id="F" class="chessCoub"></div>
+                <div id="G" class="chessCoub"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub"></div>
+                <div id="C" class="chessCoub"></div>
+                <div id="D" class="chessCoub"></div>
+                <div id="E" class="chessCoub"></div>
+                <div id="F" class="chessCoub"></div>
+                <div id="G" class="chessCoub"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub"></div>
+                <div id="C" class="chessCoub"></div>
+                <div id="D" class="chessCoub"></div>
+                <div id="E" class="chessCoub"></div>
+                <div id="F" class="chessCoub"></div>
+                <div id="G" class="chessCoub"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub"></div>
+                <div id="C" class="chessCoub"></div>
+                <div id="D" class="chessCoub"></div>
+                <div id="E" class="chessCoub"></div>
+                <div id="F" class="chessCoub"></div>
+                <div id="G" class="chessCoub"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub"></div>
+                <div id="C" class="chessCoub"></div>
+                <div id="D" class="chessCoub"></div>
+                <div id="E" class="chessCoub"></div>
+                <div id="F" class="chessCoub"></div>
+                <div id="G" class="chessCoub"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub"></div>
+                <div id="C" class="chessCoub"></div>
+                <div id="D" class="chessCoub"></div>
+                <div id="E" class="chessCoub"></div>
+                <div id="F" class="chessCoub"></div>
+                <div id="G" class="chessCoub"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+                <div id="A" class="chessCoub beforeNum"></div>
+                <div id="B" class="chessCoub letterBottom"></div>
+                <div id="C" class="chessCoub letterBottom"></div>
+                <div id="D" class="chessCoub letterBottom"></div>
+                <div id="E" class="chessCoub letterBottom"></div>
+                <div id="F" class="chessCoub letterBottom"></div>
+                <div id="G" class="chessCoub letterBottom"></div>
+                <div id="H" class="chessCoub afterNum"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+// массив для дивов
+let blocks = document.getElementsByClassName('chessCoub');
+// начальный номер ряда
+let count = 1;
+// раскраска доски на черные квадраты в порядке сверху вниз и слева направо
+for (let i = 0; i < blocks.length; i++) {
+    // раскраска в черный нечетных квадратов с нечетным номером ряда
+    if (i % 2 && i > 0 && count % 2) blocks[i].style.background = 'black';
+    // назначить следующий номер ряда в обратном шахматному порядке сверху вниз
+    if (i % 8 == 0 && i > 0) {
+        count++;
+    }
+    // раскраска в черный четных квадратов с четным номером ряда
+    if (i % 2 == 0 && count % 2 == 0) {
+        blocks[i].style.background = 'black';
+    }
+
+    blocks[i].onclick = stepHorse;
+}
+// функция для смены цвета по клику и вывода возможных ходов коня
+function stepHorse() {
+    // смена цвета нажатого квадрата
+    this.style.background = 'blue';
+    this.style.border = '1px solid grey';
+    // вывод возможных ходов
+    for (let i = 0; i < blocks.length; i++) {
+        if (blocks[i].style.background == 'blue' && i > 7 &&
+            blocks[i].id != 'A' && blocks[i].id != 'B') {
+            blocks[i - 10].style.background = 'lime';
+            blocks[i - 10].style.border = '1px solid grey';
+        }
+
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'G' &&
+            blocks[i].id != 'H' && i > 7) {
+            blocks[i - 6].style.background = 'lime';
+            blocks[i - 6].style.border = '1px solid grey';
+        }
+
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'H' &&
+            i >= 15) {
+            blocks[i - 15].style.background = 'lime';
+            blocks[i - 15].style.border = '1px solid grey';
+        }
+
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'A' &&
+            i >= 17) {
+            blocks[i - 17].style.background = 'lime';
+            blocks[i - 17].style.border = '1px solid grey';
+        }
+
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'A' &&
+            i <= 48) {
+            blocks[i + 15].style.background = 'lime';
+            blocks[i + 15].style.border = '1px solid grey';
+        }
+
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'H' &&
+            i <= 46) {
+            blocks[i + 17].style.background = 'lime';
+            blocks[i + 17].style.border = '1px solid grey';
+        }
+
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'A' &&
+            blocks[i].id != 'B' && i <= 57) {
+            blocks[i + 6].style.background = 'lime';
+            blocks[i + 6].style.border = '1px solid grey';
+        }
+        
+        if (blocks[i].style.background == 'blue' && blocks[i].id != 'G' &&
+            blocks[i].id != 'H' && i <= 53) {
+            blocks[i + 10].style.background = 'lime';
+            blocks[i + 10].style.border = '1px solid grey';
+        }
+    }
+}
+</script>
+
+</html>
