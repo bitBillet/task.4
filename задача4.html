@@ -209,7 +209,7 @@ function stepHorse() {
     // смена цвета нажатого квадрата
     this.style.background = 'blue';
     this.style.border = '1px solid grey';
-    // вывод возможных ходов
+    // вывод возможных ходов назад
     for (let i = 0; i < blocks.length; i++) {
         if (blocks[i].style.background == 'blue' && i > 7 &&
             blocks[i].id != 'A' && blocks[i].id != 'B') {
@@ -234,7 +234,7 @@ function stepHorse() {
             blocks[i - 17].style.background = 'lime';
             blocks[i - 17].style.border = '1px solid grey';
         }
-
+        // вывод возможных ходов вперед
         if (blocks[i].style.background == 'blue' && blocks[i].id != 'A' &&
             i <= 48) {
             blocks[i + 15].style.background = 'lime';
